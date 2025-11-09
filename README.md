@@ -96,8 +96,9 @@ python queuectl.py dlq
 [Worker 1] ▶️ Running job demo1 (attempt 1)
 [Worker 1] ✅ Completed job demo1
 
-🎥 Demo Video
-Click the link : https://drive.google.com/file/d/1zE5SecvG2_1Did6zn91PCQW93BJfAY2A/view?usp=drive_link
+## 🎥 Demo Video  
+[🎬 Click here to watch the demo](https://drive.google.com/file/d/https://drive.google.com/file/d/1zE5SecvG2_1Did6zn91PCQW93BJfAY2A/view?usp=drive_link/view?usp=sharing)
+
 
 
 👤 Author
