@@ -48,22 +48,22 @@ This project was developed as part of a **Backend Developer Internship Assignmen
 git clone https://github.com/PavanBoggavarapu/queuectl.git
 cd queuectl
 
-Step 2 — Install Dependencies
+###Step 2 — Install Dependencies
 pip install -r requirements.txt
 
-Enqueue Jobs
+###Enqueue Jobs
 python queuectl.py enqueue "{\"id\":\"job1\",\"command\":\"echo hello\"}"
 python queuectl.py enqueue "{\"id\":\"job2\",\"command\":\"echo success\"}"
 python queuectl.py enqueue "{\"id\":\"job3\",\"command\":\"wrongcmd\"}"
 
-List All Jobs
+###List All Jobs
 
 python queuectl.py list
 
-Start Worker
+###Start Worker
 python queuectl.py worker --count 1
 
-View Dead Letter Queue
+###View Dead Letter Queue
 python queuectl.py dlq
 
 | State        | Meaning                            |
@@ -74,34 +74,34 @@ python queuectl.py dlq
 | `failed`     | Job failed and will retry          |
 | `dead`       | Job moved to DLQ after max retries |
 
-Retry & Backoff Logic
+###Retry & Backoff Logic
 
 QueueCTL uses exponential backoff for retries:
 
 delay = base ^ attempts
 
-Example (base = 2):
+###Example (base = 2):
 ✅ 1st retry → 2 seconds
 ✅ 2nd retry → 4 seconds
 ✅ 3rd retry → 8 seconds
 
-After exceeding max_retries, the job is moved to the Dead Letter Queue.
+###After exceeding max_retries, the job is moved to the Dead Letter Queue.
 
-Example Run
+###Example Run
 python queuectl.py enqueue "{\"id\":\"demo1\",\"command\":\"echo demo\"}"
 python queuectl.py list
 python queuectl.py worker --count 1
 python queuectl.py dlq
 
-Expected Output
+###Expected Output
 ✅ Job 'demo1' added successfully.
 [Worker 1] ▶️ Running job demo1 (attempt 1)
 [Worker 1] ✅ Completed job demo1
 
-Demo Video
+###Demo Video
 ➡️ Add your Google Drive video link here:
 
-Author
+###Author
 
 Pavan B
 B.Tech CSE (AI/ML)
